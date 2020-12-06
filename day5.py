@@ -1,4 +1,4 @@
-import io
+import advent_io as io
 
 input_file = 'day5.input'
 
@@ -23,7 +23,6 @@ def process_seat_id(line):
     print(f"row {x1} seat {y1} = {x1*8 + y1}")
     return (x1*8) + y1
 
-with io.open(input_file, 'rt') as f:
 
-    answer = max([process_seat_id(line) for line in f.readlines()])
-    print(answer)
+answer = max([process_seat_id(line) for line in io.read_input(input_file)])
+print(answer)

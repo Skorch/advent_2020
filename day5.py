@@ -18,8 +18,8 @@ def fetch_row(start, end, code, low_code):
 
 
 def process_seat_id(line):
-    x1 = fetch_row(0, total_rows-1, line[:7], "F")
-    y1 = fetch_row(0, total_cols-1, line[7:], "L")
+    x1 = fetch_row(0, total_rows, line[:7], "F")
+    y1 = fetch_row(0, total_cols, line[7:], "L")
     print(f"row {x1} seat {y1} = {x1*8 + y1}")
     return (x1*8) + y1
 

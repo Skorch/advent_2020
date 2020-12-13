@@ -34,7 +34,7 @@ for line in io.read_input('day12.input'):
     elif op == 'R':
         waypoint = np.rot90(waypoint, -int(val/90))
     elif op == 'L':
-        waypoint = np.rot90(waypoint, x = int(val/90))        
+        waypoint = np.rot90(waypoint, int(val/90))        
     elif op in v:
         waypoint = np.add(waypoint, np.multiply(v[op], val))
     else:
